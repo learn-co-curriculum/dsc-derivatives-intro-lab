@@ -66,7 +66,7 @@ Ok, so give this a shot. Write $ f(x) = 4x^3 + 11x^2 $ as an array of terms.  As
 
 
 ```python
-array_2 = np.array([[4, 3], [11, 2]])
+array_2 = None
 ```
 
 ### 2. Evaluating a function at a specific point 
@@ -81,7 +81,7 @@ Now that we can represent a function in code, let's write a Python function call
 
 ```python
 def term_output(array, input_value):
-    return array[0]*input_value**array[1]
+    pass
 ```
 
 
@@ -108,22 +108,20 @@ Now write a function called `output_at`, when passed a `array_of_terms` and a va
 
 ```python
 def output_at(array_of_terms, x_value):
-    outputs = []
-    for i in range(int(np.shape(array_of_terms)[0])):
-        outputs.append(array_of_terms[i][0]*x_value**array_of_terms[i][1])
-    return sum(outputs)
+    pass
 ```
 
 
 ```python
-array_3 = np.array([[3, 2], [-11, 0]])
+array_3 = None
 ```
 
 Verify that $f(2) = 3*2^2 - 11 = 1$.
 
 
 ```python
-output_at(array_3, 2) # 1 
+
+# 1 
 ```
 
 
@@ -137,7 +135,8 @@ What value does $f(3)$ return?
 
 
 ```python
-output_at(array_3, 3) # 16
+
+# 16
 ```
 
 
@@ -151,7 +150,6 @@ Now we can use our `output_at` function to display our function graphically.  We
 
 
 ```python
-import numpy as np
 import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots(figsize=(12,6))
@@ -174,7 +172,7 @@ Let's start with a function, $f(x) = 4x + 15$.  We represent the function as the
 
 
 ```python
-lin_function = np.array([[4, 1], [15, 0]])
+lin_function = None
 ```
 
 We can plot the function by calculating outputs at a range of $x$ values.  Note that we use our `output_at` function to calculate the output at each individual $x$ value.
@@ -231,8 +229,8 @@ Let's show $\Delta f$ and $\Delta x$ graphically.
 
 
 ```python
-x_value = 2
-delta_x = 1
+x_value = None
+delta_x = None
 ```
 
 
@@ -271,15 +269,15 @@ Let's try this for $f(x) = 4x + 15 $.  Round the result to three decimal places.
 
 ```python
 def derivative_of(array_of_terms, x_value, delta_x):
-    delta = delta_f(array_of_terms, x_value, delta_x)
-    return round(delta/delta_x, 3)
+    pass
 ```
 
 Now let's use this function along with our stored `x_value` and `delta_x`.
 
 
 ```python
-derivative_of(lin_function, x_value=x_value, delta_x=delta_x) # 4.0
+
+# 4.0
 ```
 
 
