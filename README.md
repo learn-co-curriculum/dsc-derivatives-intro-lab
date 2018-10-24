@@ -16,7 +16,6 @@ You will be able to:
 
 - Understand the definition of a derivative
 - Understand that a derivative is the instantaneous rate of change of a function
-- Explain the mathematical definition of a function: $f'(x) = \dfrac{\Delta y}{\Delta x} =  \dfrac{f(x + \Delta x) - f(x)}{\Delta x}$
 
 ## Let's begin: Starting with functions
 
@@ -26,9 +25,8 @@ We are about to learn to take the derivative of a function in code.  But before 
 
 For example, we want to write the function $f(x) = 2x^2 + 4x - 10 $ in a way that allows us to easily determine the exponent of each term.
 
-This is our technique: write the formula as a numpy array:  
+This is our technique: write the formula as a numpy array. For example, for a function $f(x)= 7x^3$:
 
-> A tuple is a list whose elements cannot be reassigned.  But everything else, for our purposes, is the same.  
 ```python
 arr = np.array([7, 3])
 arr[0] # 7
@@ -51,13 +49,6 @@ array_1 = np.array([[4, 2], [4, 1], [-10, 0]])
 ```python
 np.shape(array_1)
 ```
-
-
-
-
-    (3, 2)
-
-
 
 So each row in the `np.array` represents a different term in the function.  The first column is the term's constant and the second column is the term's exponent.  Thus $4x^2$ translates to `[4, 2]` and  $-10$ translates to `[-10, 0]` because $-10$ equals $-10*x^0$.  
 > We'll refer to this `np.array` as "array of terms", or `array_of_terms`.
@@ -89,13 +80,6 @@ def term_output(array, input_value):
 term_output(np.array([3, 2]), 2) # 12
 ```
 
-
-
-
-    12
-
-
-
 > **Hint:** To raise a number to an exponent in python, like 3^2 use the double star, as in:
 ```python
 3**2 # 9 
@@ -124,13 +108,6 @@ Verify that $f(2) = 3*2^2 - 11 = 1$.
 # 1 
 ```
 
-
-
-
-    1
-
-
-
 What value does $f(3)$ return?
 
 
@@ -138,13 +115,6 @@ What value does $f(3)$ return?
 
 # 16
 ```
-
-
-
-
-    16
-
-
 
 Now we can use our `output_at` function to display our function graphically.  We simply declare a list of `x_values` and then calculate `output_at` for each of the `x_values`.
 
@@ -161,10 +131,6 @@ plt.plot(x_values, y_values, label = "3x^2 - 11")
 ax.legend(loc="upper center",fontsize='large')
 plt.show()
 ```
-
-
-    <matplotlib.figure.Figure at 0x111d9aeb8>
-
 
 ## Moving to derivatives of linear functions
 
@@ -190,10 +156,6 @@ ax.legend(loc="upper center",fontsize='large')
 plt.show()
 ```
 
-
-![png](index_files/index_29_0.png)
-
-
 Ok, time to do what we are here for: *derivatives*.  Remember that the derivative is the instantaneous rate of change of a function, and is expressed as:
 
 $$ f'(x) = \frac{\Delta f}{\Delta x}  = \frac{f(x + \Delta x) - f(x)}{\Delta x}  $$ 
@@ -213,13 +175,6 @@ def delta_f(array_of_terms, x_value, delta_x):
 ```python
 delta_f(lin_function, 2, 1) # 4
 ```
-
-
-
-
-    4
-
-
 
 So for $f(x) = 4x + 15$, when $x$ = 2, and $\Delta x = 1$, $\Delta f$ is 4.  
 
@@ -256,10 +211,6 @@ ax.legend(loc='upper left', fontsize='large')
 plt.show()
 ```
 
-
-![png](index_files/index_37_0.png)
-
-
 ### Calculating the derivative
 
 Write a function, `derivative_at` that calculates $\dfrac{\Delta f}{\Delta x}$ when given a `array_of_terms`, an `x_value` for the value of $(x)$ the derivative is evaluated at, and `delta_x`, which represents $\Delta x$.  
@@ -279,13 +230,6 @@ Now let's use this function along with our stored `x_value` and `delta_x`.
 
 # 4.0
 ```
-
-
-
-
-    4.0
-
-
 
 ### We do: Building more plots
 
@@ -316,33 +260,6 @@ tan_line = tangent_line(lin_function, 2, line_length = 2, delta_x = .1)
 tan_line
 ```
 
-
-
-
-    {'lab': " f' (x) = 4.0",
-     'tan': array([19.        , 19.16326531, 19.32653061, 19.48979592, 19.65306122,
-            19.81632653, 19.97959184, 20.14285714, 20.30612245, 20.46938776,
-            20.63265306, 20.79591837, 20.95918367, 21.12244898, 21.28571429,
-            21.44897959, 21.6122449 , 21.7755102 , 21.93877551, 22.10204082,
-            22.26530612, 22.42857143, 22.59183673, 22.75510204, 22.91836735,
-            23.08163265, 23.24489796, 23.40816327, 23.57142857, 23.73469388,
-            23.89795918, 24.06122449, 24.2244898 , 24.3877551 , 24.55102041,
-            24.71428571, 24.87755102, 25.04081633, 25.20408163, 25.36734694,
-            25.53061224, 25.69387755, 25.85714286, 26.02040816, 26.18367347,
-            26.34693878, 26.51020408, 26.67346939, 26.83673469, 27.        ]),
-     'x_dev': array([1.        , 1.04081633, 1.08163265, 1.12244898, 1.16326531,
-            1.20408163, 1.24489796, 1.28571429, 1.32653061, 1.36734694,
-            1.40816327, 1.44897959, 1.48979592, 1.53061224, 1.57142857,
-            1.6122449 , 1.65306122, 1.69387755, 1.73469388, 1.7755102 ,
-            1.81632653, 1.85714286, 1.89795918, 1.93877551, 1.97959184,
-            2.02040816, 2.06122449, 2.10204082, 2.14285714, 2.18367347,
-            2.2244898 , 2.26530612, 2.30612245, 2.34693878, 2.3877551 ,
-            2.42857143, 2.46938776, 2.51020408, 2.55102041, 2.59183673,
-            2.63265306, 2.67346939, 2.71428571, 2.75510204, 2.79591837,
-            2.83673469, 2.87755102, 2.91836735, 2.95918367, 3.        ])}
-
-
-
 Now, let's plot our function, $\Delta f$ and $\Delta x$ again along with our `rate_of_change` line.
 
 
@@ -370,10 +287,6 @@ ax.legend(loc='upper left', fontsize='large')
 plt.show()
 ```
 
-
-![png](index_files/index_50_0.png)
-
-
 So that function highlights the rate of change is moving at precisely the point $x = 2$. Sometimes it is useful to see how the derivative is changing across all $x$ values.  With linear functions we know that our function is always changing by the same rate, and therefore the rate of change is constant.  Let's write a function that allows us to see the function, and the derivative side by side.
 
 
@@ -396,10 +309,6 @@ plt.legend(loc="upper left");
 
 plt.show()
 ```
-
-
-![png](index_files/index_52_0.png)
-
 
 ## Summary
 
