@@ -16,7 +16,6 @@ You will be able to:
 
 - Understand the definition of a derivative
 - Understand that a derivative is the instantaneous rate of change of a function
-- Explain the mathematical definition of a function: $f'(x) = \dfrac{\Delta y}{\Delta x} =  \dfrac{f(x + \Delta x) - f(x)}{\Delta x}$
 
 ## Let's begin: Starting with functions
 
@@ -26,9 +25,8 @@ We are about to learn to take the derivative of a function in code.  But before 
 
 For example, we want to write the function $f(x) = 2x^2 + 4x - 10 $ in a way that allows us to easily determine the exponent of each term.
 
-This is our technique: write the formula as a numpy array:  
+This is our technique: write the formula as a numpy array. For example, for a function $f(x)= 7x^3$:
 
-> A tuple is a list whose elements cannot be reassigned.  But everything else, for our purposes, is the same.  
 ```python
 arr = np.array([7, 3])
 arr[0] # 7
