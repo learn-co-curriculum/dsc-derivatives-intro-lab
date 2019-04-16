@@ -191,7 +191,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_29_0.png)
+![png](index_files/index_20_0.png)
 
 
 Ok, time to do what we are here for: *derivatives*.  Remember that the derivative is the instantaneous rate of change of a function, and is expressed as:
@@ -257,7 +257,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_37_0.png)
+![png](index_files/index_26_0.png)
 
 
 ### Calculating the derivative
@@ -371,7 +371,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_50_0.png)
+![png](index_files/index_36_0.png)
 
 
 So that function highlights the rate of change is moving at precisely the point $x = 2$. Sometimes it is useful to see how the derivative is changing across all $x$ values.  With linear functions we know that our function is always changing by the same rate, and therefore the rate of change is constant.  Let's write a function that allows us to see the function, and the derivative side by side.
@@ -398,7 +398,7 @@ plt.show()
 ```
 
 
-![png](index_files/index_52_0.png)
+![png](index_files/index_38_0.png)
 
 
 ## Summary
