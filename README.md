@@ -99,7 +99,7 @@ term_output(np.array([3, 2]), 2) # 12
 3**2 # 9 
 ```
 
-Now write a function called `output_at`, when passed a `array_of_terms` and a value of $x$, calculates the value of the function at that value.  
+Now write a function called `output_at`, when passed an `array_of_terms` and a value of $x$, calculates the value of the function at that value.  
 * For example, we'll use `output_at` to calculate $f(x) = 3x^2 - 11$.  
 * Then `output_at([np.array([[3, 2], [-11, 0]]), 2)` should return $f(2) = 3*2^2 - 11 = 1$. Store `np.array([[3, 2], [-11, 0]])` as `array_3`.
 
