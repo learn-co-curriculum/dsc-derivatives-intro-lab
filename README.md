@@ -287,9 +287,9 @@ derivative_of(lin_function, x_value=x_value, delta_x=delta_x) # 4.0
 
 
 
-### We do: Building more plots
+### Building more plots
 
-Ok, now that we have written a Python function that allows us to plot our list of terms, we can write a function called `tangent_line` that outputs the necessary terms to plot the or slope for the function between initial $x$ and $x$ plus $\Delta x$. We'll walk you through this one.  
+Ok, now that we have written a Python function that allows us to plot our list of terms, we can write a function called `tangent_line` that outputs the necessary terms to plot the slope of the function between initial $x$ and $x$ plus $\Delta x$. We'll walk you through this one.  
 
 
 ```python
