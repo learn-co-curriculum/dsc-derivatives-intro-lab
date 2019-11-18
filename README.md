@@ -14,8 +14,8 @@ $f'(x) = \dfrac{\Delta y}{\Delta x} =  \dfrac{f(x + \Delta x) - f(x)}{\Delta x}$
 
 You will be able to: 
 
-- Understand the definition of a derivative
-- Understand that a derivative is the instantaneous rate of change of a function
+- Use python functions to demonstrate derivatives of functions
+- Describe what a derivative means in the context of a real-world example
 
 ## Let's begin: Starting with functions
 
