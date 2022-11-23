@@ -1,4 +1,3 @@
-
 # Introduction to Derivatives - Lab
 
 ## Introduction
@@ -315,3 +314,8 @@ plt.show()
 In this section, we coded out our function for calculating and plotting the derivative.  We started by seeing how we can represent different types of functions.  Then we moved onto writing the `output_at` function which evaluates a provided function at a value of x.  We calculated `delta_f` by subtracting the output at initial x value from the output at that initial x plus delta x.  After calculating `delta_f`, we moved onto our `derivative_at` function, which simply divided `delta_f` from `delta_x`.  
 
 In the final section, we plotted out some of our findings. We introduced the `tangent_line` function to get the slope for a function between an initial $x$, and $x + \Delta x $
+
+
+```python
+
+```
