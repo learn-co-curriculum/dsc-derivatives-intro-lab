@@ -1,4 +1,3 @@
-
 # Introduction to Derivatives - Lab
 
 ## Introduction
@@ -237,7 +236,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_26_0.png)
+    
 
 
 ## Moving to derivatives of linear functions
@@ -285,7 +286,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_32_0.png)
+    
 
 
 Ok, time to do what we are here for: *derivatives*.  Remember that the derivative is the instantaneous rate of change of a function, and is expressed as:
@@ -395,7 +398,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_42_0.png)
+    
 
 
 ### Calculating the derivative
@@ -490,7 +495,16 @@ tan_line
 
 
 
-    {'lab': " f' (x) = 4.0",
+    {'x_dev': array([1.        , 1.04081633, 1.08163265, 1.12244898, 1.16326531,
+            1.20408163, 1.24489796, 1.28571429, 1.32653061, 1.36734694,
+            1.40816327, 1.44897959, 1.48979592, 1.53061224, 1.57142857,
+            1.6122449 , 1.65306122, 1.69387755, 1.73469388, 1.7755102 ,
+            1.81632653, 1.85714286, 1.89795918, 1.93877551, 1.97959184,
+            2.02040816, 2.06122449, 2.10204082, 2.14285714, 2.18367347,
+            2.2244898 , 2.26530612, 2.30612245, 2.34693878, 2.3877551 ,
+            2.42857143, 2.46938776, 2.51020408, 2.55102041, 2.59183673,
+            2.63265306, 2.67346939, 2.71428571, 2.75510204, 2.79591837,
+            2.83673469, 2.87755102, 2.91836735, 2.95918367, 3.        ]),
      'tan': array([19.        , 19.16326531, 19.32653061, 19.48979592, 19.65306122,
             19.81632653, 19.97959184, 20.14285714, 20.30612245, 20.46938776,
             20.63265306, 20.79591837, 20.95918367, 21.12244898, 21.28571429,
@@ -501,16 +515,7 @@ tan_line
             24.71428571, 24.87755102, 25.04081633, 25.20408163, 25.36734694,
             25.53061224, 25.69387755, 25.85714286, 26.02040816, 26.18367347,
             26.34693878, 26.51020408, 26.67346939, 26.83673469, 27.        ]),
-     'x_dev': array([1.        , 1.04081633, 1.08163265, 1.12244898, 1.16326531,
-            1.20408163, 1.24489796, 1.28571429, 1.32653061, 1.36734694,
-            1.40816327, 1.44897959, 1.48979592, 1.53061224, 1.57142857,
-            1.6122449 , 1.65306122, 1.69387755, 1.73469388, 1.7755102 ,
-            1.81632653, 1.85714286, 1.89795918, 1.93877551, 1.97959184,
-            2.02040816, 2.06122449, 2.10204082, 2.14285714, 2.18367347,
-            2.2244898 , 2.26530612, 2.30612245, 2.34693878, 2.3877551 ,
-            2.42857143, 2.46938776, 2.51020408, 2.55102041, 2.59183673,
-            2.63265306, 2.67346939, 2.71428571, 2.75510204, 2.79591837,
-            2.83673469, 2.87755102, 2.91836735, 2.95918367, 3.        ])}
+     'lab': " f' (x) = 4.0"}
 
 
 
@@ -568,7 +573,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_57_0.png)
+    
 
 
 So that function highlights the rate of change is moving at precisely the point $x = 2$. Sometimes it is useful to see how the derivative is changing across all $x$ values.  With linear functions, we know that our function is always changing by the same rate, and therefore the rate of change is constant.  Let's write a function that allows us to see the function and the derivative side by side.
@@ -617,7 +624,9 @@ plt.show()
 ```
 
 
+    
 ![png](index_files/index_60_0.png)
+    
 
 
 ## Summary
@@ -625,3 +634,8 @@ plt.show()
 In this section, we coded out our function for calculating and plotting the derivative.  We started by seeing how we can represent different types of functions.  Then we moved onto writing the `output_at` function which evaluates a provided function at a value of x.  We calculated `delta_f` by subtracting the output at initial x value from the output at that initial x plus delta x.  After calculating `delta_f`, we moved onto our `derivative_at` function, which simply divided `delta_f` from `delta_x`.  
 
 In the final section, we plotted out some of our findings. We introduced the `tangent_line` function to get the slope for a function between an initial $x$, and $x + \Delta x $
+
+
+```python
+
+```
