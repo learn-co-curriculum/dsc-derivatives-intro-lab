@@ -583,6 +583,7 @@ So that function highlights the rate of change is moving at precisely the point 
 
 ```python
 fig, ax = plt.subplots(figsize=(10,4))
+ax.remove()
 
 x_values = np.linspace(0, 5, 100)
 function_values = list(map(lambda x: output_at(lin_function, x),x_values))
@@ -605,6 +606,7 @@ plt.show()
 ```python
 # __SOLUTION__ 
 fig, ax = plt.subplots(figsize=(10,4))
+ax.remove()
 
 x_values = np.linspace(0, 5, 100)
 function_values = list(map(lambda x: output_at(lin_function, x),x_values))
