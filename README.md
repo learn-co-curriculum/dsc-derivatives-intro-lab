@@ -264,6 +264,7 @@ Now, let's plot our function, $\Delta f$ and $\Delta x$ again along with our `ra
 
 ```python
 fig, ax = plt.subplots(figsize=(10,6))
+ax.remove()
 
 x_values = np.linspace(0, 5, 100)
 y_values = list(map(lambda x: output_at(lin_function, x), x_values))
